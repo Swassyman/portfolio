@@ -39,7 +39,7 @@
 			</div>
 			<div class="pl-7 text-2xl font-bold text-white">
 				{#if stats && stats.activityPercent !== undefined}
-					{stats.activityPercent.toFixed(4)}%
+					{stats.activityPercent.toFixed(2)}%
 				{:else}
 					99.9982%
 				{/if}

@@ -12,7 +12,7 @@
 		<div>
 			<h3 class="mb-6 flex items-center gap-3 text-xl font-bold text-white uppercase">
 				<Cpu class="text-[#FFB86C]" />
-				WHO__AM__I?
+				WHO AM I?
 			</h3>
 			<div class="space-y-4 font-mono text-sm leading-relaxed text-[#888888]">
 				<p>
