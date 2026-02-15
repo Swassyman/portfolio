@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+  --bg-main: #050505;
+  --bg-panel: #0a0a0a;
+  --border-dim: #333333;
+  --border-bright: #555555;
+
+  /* Text Colors */
+  --text-main: #FFFFFF;
+  --text-muted: #888888;
+  --text-dim: #444444;
+
+  /* Accents */
+  --accent-gold: #FFB86C;
+  --accent-alert: #FF5555;
+  --accent-success: #50FA7B;
+
+  /* System Fonts */
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+/* Scrollbar aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-dim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-bright);
+}
+
+/* Utilities */
+.border-grid {
+  background-image: linear-gradient(var(--border-dim) 1px, transparent 1px), linear-gradient(90deg, var(--border-dim) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+.scanline::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
