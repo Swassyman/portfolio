@@ -7,7 +7,7 @@
 	class="relative z-40 flex items-center justify-end px-12 py-6 font-mono text-xs tracking-widest"
 >
 	<nav class="flex items-center gap-8 text-[#888888]">
-		<a href="/" class="transition-colors hover:text-white">01. PROFILE</a>
+		<a href="/" class="transition-colors hover:text-white">01. IDENTITY</a>
 		<a href="/projects" class="transition-colors hover:text-white">02. PROJECTS</a>
 		<a href="/contact" class="transition-colors hover:text-white">03. CONTACT</a>
 	</nav>

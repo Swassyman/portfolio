@@ -54,7 +54,7 @@
 				<div class="mt-6 flex flex-wrap gap-2">
 					{#each project.techStack as tech}
 						<span
-							class="border border-[#333333] bg-[#111111] px-2 py-1 text-[10px] font-bold tracking-wider text-[#666666] uppercase transition-colors group-hover:border-[#444444] group-hover:text-[#888888]"
+							class="border border-[#333333] bg-[#111111] px-2 py-1 text-[10px] font-bold tracking-wider text-[#666666] uppercase transition-colors group-hover:border-[#444444] group-hover:text-[#ffffff]"
 						>
 							{tech}
 						</span>

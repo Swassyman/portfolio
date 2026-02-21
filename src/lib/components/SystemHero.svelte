@@ -32,23 +32,33 @@
 	</div>
 
 	<div class="relative hidden md:block">
-		<!-- Decorative Elements -->
-		<div class="absolute -top-4 -right-4 h-24 w-24 border-t-2 border-r-2 border-[#FFB86C]"></div>
-		<div class="absolute -bottom-4 -left-4 h-24 w-24 border-b-2 border-l-2 border-[#50FA7B]"></div>
+		<!-- CRT TV Frame -->
+		<div class="crt-container relative mx-auto w-full max-w-sm">
+			<!-- TV Case/Bezel -->
+			<div class="relative z-20 border-[16px] border-[#1a1a1a] bg-[#1a1a1a] shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_10px_rgba(255,255,255,0.1)] rounded-[2rem]">
+				
+				<!-- Screen Content -->
+				<div class="relative overflow-hidden bg-black rounded-[1rem] aspect-square group">
+					<!-- The Image -->
+					<img
+						src="/profile.jpg"
+						alt="Swarag Siby"
+						class="h-full w-full object-cover opacity-90"
+					/>
 
-		<!-- Image Container -->
-		<div class="relative grayscale transition-all duration-500 hover:grayscale-0">
-			<!-- Scanline Overlay -->
-			<div
-				class="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))]"
-				style="background-size: 100% 2px, 3px 100%;"
-			></div>
-
-			<img
-				src="/profile.jpg"
-				alt="Swarag Siby"
-				class="w-full border border-[#333333] bg-[#0a0a0a] object-cover shadow-2xl"
-			/>
+					<!-- CRT Glass Reflection -->
+					<div class="pointer-events-none absolute inset-0 z-30 bg-gradient-to-tr from-transparent via-white/5 to-white/10"></div>
+					
+					<!-- CRT Scanlines -->
+					<div class="crt-scanlines pointer-events-none absolute inset-0 z-20"></div>
+					
+					<!-- Screen Vignette -->
+					<div class="pointer-events-none absolute inset-0 z-10 shadow-[inset_0_0_60px_rgba(0,0,0,0.8)]"></div>
+				</div>
+			</div>
+			
+			<!-- TV Stand/Base Shadow -->
+			<div class="mx-auto mt-[-10px] h-4 w-3/4 rounded-[100%] bg-black/40 blur-md"></div>
 		</div>
 	</div>
 </section>
@@ -56,5 +66,40 @@
 <style>
 	.text-stroke-white {
 		-webkit-text-stroke: 2px white;
+	}
+
+	.crt-scanlines {
+		background: linear-gradient(
+			rgba(18, 16, 16, 0) 50%,
+			rgba(0, 0, 0, 0.2) 50%
+		);
+		background-size: 100% 4px;
+	}
+
+	.crt-flicker {
+		animation: flicker 0.15s infinite;
+	}
+
+	@keyframes flicker {
+		0% { opacity: 0.05; }
+		5% { opacity: 0.1; }
+		10% { opacity: 0.05; }
+		15% { opacity: 0.15; }
+		20% { opacity: 0.05; }
+		100% { opacity: 0.05; }
+	}
+
+	/* Optional: Tube Curvature (Slight distortion) */
+	.crt-container::after {
+		content: "";
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		right: 16px;
+		bottom: 16px;
+		background: radial-gradient(circle, transparent 70%, rgba(0,0,0,0.2) 100%);
+		z-index: 25;
+		pointer-events: none;
+		border-radius: 1rem;
 	}
 </style>

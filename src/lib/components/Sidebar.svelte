@@ -59,25 +59,28 @@
 					---
 				{/if}
 			</div>
-			{#if stats}
-				<div class="mt-1 pl-7 text-[10px] text-[#666666] uppercase">
-					{stats.totalStars} Stars across {stats.repos} Repos
-				</div>
-			{/if}
 		</div>
 
-		<!-- Repos -->
-		<div>
-			<div class="mb-2 flex items-center gap-3 text-xs tracking-wider text-[#888888] uppercase">
-				<FolderGit2 class="h-4 w-4 text-[#50FA7B]" />
-				<span>Active Repositories</span>
+		<!-- System Vitals -->
+		<div class="space-y-6 border-t border-[#333333] pt-6">
+			<div>
+				<div class="mb-2 flex items-center gap-3 text-xs tracking-wider text-[#888888] uppercase">
+					<Activity class="h-4 w-4 text-[#50FA7B]" />
+					<span>System Uptime</span>
+				</div>
+				<div class="pl-7 text-xl font-bold text-white">99.9982%</div>
 			</div>
-			<div class="pl-7 font-bold text-white">
-				{#if stats}
-					{stats.repos}
-				{:else}
-					---
-				{/if}
+
+			<div>
+				<div class="mb-2 flex items-center gap-3 text-xs tracking-wider text-[#888888] uppercase">
+					<Coffee class="h-4 w-4 text-[#FFB86C]" />
+					<span>Caffeine Level</span>
+				</div>
+				<div class="w-full pl-7">
+					<div class="h-1 overflow-hidden rounded-full bg-[#222222]">
+						<div class="h-full w-[85%] bg-[#FFB86C]"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
