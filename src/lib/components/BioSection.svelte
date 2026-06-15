@@ -37,7 +37,7 @@
 						class="bg-gradient-to-r bg-clip-text font-bold text-transparent"
 						style="background-image: linear-gradient(to right, #ff5555, #ffb86c, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6);"
 					>
-						Iroshi
+						War-In-Progress
 					</span> with lots of love poured into it.
 				</p>
 			</div>
